@@ -5,12 +5,11 @@ app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs')
 var path = require("path");
 
-app.get('/', (req, res) => {
+app.get('/home', (req, res) => {
     res.render('landingPage/home');
-    })
+})
 
-    
 
-    app.listen(port,()=>{
+app.listen(port,()=>{
     console.log(`${port} connected`)
 })
